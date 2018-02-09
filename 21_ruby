@@ -1,0 +1,46 @@
+#generate 2 cards (numbers between 1-11) for each player
+#----------------------------------------------------#
+cards = {
+ 'black' => {'clubs' => ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'], 'spades' => ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']},
+ 'red' => {'hearts' => ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'],  'diamonds' => ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']}}
+
+deck = cards['red']['hearts'] + cards['black']['clubs'] + cards['black']['spades'] + cards['red']['diamonds']
+
+deck.flatten.sample(2)
+
+# def genrand
+#   rand(1..11)
+# end
+
+
+# @cpu = {:card1 => genrand}
+
+# @player = {:card1 => genrand,
+#           :card2 => genrand,}
+
+
+# p "The dealers card is #{@cpu[:card1]}"
+# p "Your are dealt the card #{@player[:card1]} and #{@player[:card2]}"
+
+# #show both your cards but only one of the dealers (possibly dont generate it yet?)
+
+# total = @player.values.sum
+# p "your starting hand total is #{total}, hit or stay?"
+
+# move = gets.chomp.downcase
+
+# def hitstay move
+#   if move == "hit" 
+#     @player.merge!(card3: genrand)
+#   end 
+# end
+# hitstay move
+# p @player
+# p total << @player[:card3]
+
+#---------------------------------------#
+
+#chose wether to hit or stay(reapeat until stop or bust limit 21)
+
+#dealer reveals (or generates) secret card and hits until he beats or busts
+
